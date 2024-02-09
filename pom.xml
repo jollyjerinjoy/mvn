@@ -15,5 +15,24 @@
       <version>4.7</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.webjars.bower/jquery -->
+ <dependency>
+     <groupId>org.webjars.bower</groupId>
+     <artifactId>jquery</artifactId>
+     <version>1.0.4</version>
+ </dependency>
   </dependencies>
+  <!-- uses default configuration -->
+  <build>
+    <!-- To define the plugin version in your parent POM -->
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.cyclonedx</groupId>
+          <artifactId>cyclonedx-maven-plugin</artifactId>
+          <version>2.7.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom serialNumber="urn:uuid:4d1b3a9d-44ea-4734-906a-f2cbb2cc1911" version="1" xmlns="http://cyclonedx.org/schema/bom/1.4">
+  <metadata>
+    <timestamp>2024-02-09T13:08:42Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>OWASP Foundation</vendor>
+        <name>CycloneDX Maven plugin</name>
+        <version>2.7.1</version>
+        <hashes>
+          <hash alg="MD5">538c878ebf89b372876e247d056a3fc5</hash>
+          <hash alg="SHA-1">4561e50edb47e12a03712b1afce9b20cba32fd28</hash>
+          <hash alg="SHA-256">f0ea7b3bcf5c7ba649b8d9807e805385330501881677d47333aebce8305ef4d4</hash>
+          <hash alg="SHA-512">a35400ca6411692ae8964fe7030eaba2a83a2fa50e2883def3054191283c3b48e2dcdd68bf80f5a0ede3898cc6b7cb7b998aacd2c1e969320053c43b6ab8d873</hash>
+          <hash alg="SHA-384">75c0c03a03c69e82ad1f7b942d6d733da8261c4058174355d6b24ebd88cee34180f2e8484d2b0fedaf459078bdf6e927</hash>
+          <hash alg="SHA3-384">98cd312d4dfc104a0a66d65023d0aade423f08951f2a9e0215e703f0c81c4f274d8e11a2db1abc30a558b820d65860c4</hash>
+          <hash alg="SHA3-256">0c5fd65013128de457b049a824c4ad11212d668b503613ce19a54d545e5cf82d</hash>
+          <hash alg="SHA3-512">72ea0ed8faa3cc4493db96d0223094842e7153890b091ff364040ad3ad89363157fc9d1bd852262124aec83134f0c19aa4fd0fa482031d38a76d74dfd36b7964</hash>
+        </hashes>
+      </tool>
+    </tools>
+    <component type="library" bom-ref="pkg:maven/ie.atu.MvnApps/mvnApp@1.0-SNAPSHOT?type=jar">
+      <group>ie.atu.MvnApps</group>
+      <name>mvnApp</name>
+      <version>1.0-SNAPSHOT</version>
+      <licenses/>
+      <purl>pkg:maven/ie.atu.MvnApps/mvnApp@1.0-SNAPSHOT?type=jar</purl>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:maven/org.webjars.bower/jquery@1.0.4?type=jar">
+      <group>org.webjars.bower</group>
+      <name>jquery</name>
+      <version>1.0.4</version>
+      <description>WebJar for jquery</description>
+      <scope>optional</scope>
+      <hashes>
+        <hash alg="MD5">704177ba25f84ea59de1719726cb2ae7</hash>
+        <hash alg="SHA-1">7a87525c1484c2f79bedf68548ac5856391232ce</hash>
+        <hash alg="SHA-256">30979014b0e89a6a492592279c5fad758dde35f8440e5497b413bcfdad93ff3a</hash>
+        <hash alg="SHA-512">4a90e87c3811c2f36c8e0a2d819328a388e2332a86f6674c6d22149bd0f25f32c847d1ec12759fcb6d9ced285ca68753a868f35eef8064d3231ee265c0a4c0cc</hash>
+        <hash alg="SHA-384">b54675a453de05d7facc23b5b484ac3de314bf7c2f3f8fc1229a4f80efc2bde02a9aa051a20167ca028b01b7b43d7812</hash>
+        <hash alg="SHA3-384">908bc30651e812f5f3b9e126df219fd5e60a371dd703b76c81df73a596549c98df01cf9386c50fb702379ec3d22c2f31</hash>
+        <hash alg="SHA3-256">bc4360ee7ac0e404418e31e27d97eebb13e71758a10f5e2f927f7ff6d9cd4d1c</hash>
+        <hash alg="SHA3-512">d114de39f694a3a05a345391ea670d172a306b4d0def6a410a7f383c78e56e01b91e3a4b7fbf6cb08f0c538149a37b607ede8ac449437061c72f1314c8c97dc1</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/licenses/MIT</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.webjars.bower/jquery@1.0.4?type=jar</purl>
+      <externalReferences><reference type="vcs"><url>https://github.com/jquery/jquery-dist</url></reference></externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:maven/ie.atu.MvnApps/mvnApp@1.0-SNAPSHOT?type=jar">
+      <dependency ref="pkg:maven/org.webjars.bower/jquery@1.0.4?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.webjars.bower/jquery@1.0.4?type=jar"/>
+  </dependencies>
+</bom>
