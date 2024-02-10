@@ -1,4 +1,4 @@
-# Created at 2024-02-10T15:04:00.137
+# Created at 2024-02-10T22:42:49.970
 Boot Manifest-JAR contains absolute paths in classpath 'D:\Jolly\mvnTest1\mvnApp\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root

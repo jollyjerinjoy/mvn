@@ -21,6 +21,13 @@
      <artifactId>jquery</artifactId>
      <version>1.0.4</version>
  </dependency>
+ <!-- https://mvnrepository.com/artifact/org.cyclonedx/cyclonedx-maven-plugin -->
+<dependency>
+    <groupId>org.cyclonedx</groupId>
+    <artifactId>cyclonedx-maven-plugin</artifactId>
+    <version>2.7.11</version>
+</dependency>
+
   </dependencies>
   <!-- uses default configuration -->
   <build>
@@ -30,14 +37,26 @@
         <plugin>
           <groupId>org.cyclonedx</groupId>
           <artifactId>cyclonedx-maven-plugin</artifactId>
-          <version>2.7.1</version>
+          <version>2.7.11</version>
            <configuration>
                 <includeVulnerabilities>true</includeVulnerabilities>
                 <!-- Configure other plugin options -->
-          </configuration>
+                <projectType>library</projectType>
+                <schemaVersion>1.4</schemaVersion>
+                <includeBomSerialNumber>true</includeBomSerialNumber>
+                <includeCompileScope>true</includeCompileScope>
+                <includeProvidedScope>true</includeProvidedScope>
+                <includeRuntimeScope>true</includeRuntimeScope>
+                <includeSystemScope>true</includeSystemScope>
+                <includeTestScope>false</includeTestScope>
+                <includeLicenseText>false</includeLicenseText>
+                <outputReactorProjects>true</outputReactorProjects>
+                <outputFormat>all</outputFormat>
+                <outputName>CycloneDX-Sbom</outputName>
+           </configuration>
           <executions>
                 <execution>
-                    <phase>prepare-package</phase>
+                    <phase>package</phase>
                     <goals>
                         <goal>makeAggregateBom</goal>
                     </goals>
