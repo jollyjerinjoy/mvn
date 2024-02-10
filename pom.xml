@@ -31,8 +31,38 @@
           <groupId>org.cyclonedx</groupId>
           <artifactId>cyclonedx-maven-plugin</artifactId>
           <version>2.7.1</version>
+           <configuration>
+                <includeVulnerabilities>true</includeVulnerabilities>
+                <!-- Configure other plugin options -->
+          </configuration>
+          <executions>
+                <execution>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>makeAggregateBom</goal>
+                    </goals>
+                </execution>
+            </executions>
         </plugin>
+       <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>9.0.9</version>
+        <executions>
+               <execution>
+                  <goals>
+                    <goal>check</goal>
+                  </goals>
+               </execution>
+       </executions>
+    </plugin>
       </plugins>
     </pluginManagement>
   </build>
+  <properties>
+  <dependency-check.skip>false</dependency-check.skip>
+  <dependency-check.failBuildOnCVSS>10.0</dependency-check.failBuildOnCVSS>
+  <dependency-check.cveValidForHours>24</dependency-check.cveValidForHours>
+  <!-- Additional properties as needed -->
+</properties>
 </project>
